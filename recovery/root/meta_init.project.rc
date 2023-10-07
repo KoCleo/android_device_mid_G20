@@ -1,0 +1,34 @@
+# roco Add for c2k
+import meta_init.c2k.rc
+
+on post-fs
+    #autok
+    chown root system /sys/autok/debug
+    chown root system /sys/autok/param_count
+    chown root system /sys/autok/ready
+    chown root system /sys/autok/ss_corner
+    chown root system /sys/autok/suggest_vol
+    chown root system /sys/autok/stage1/2/DONE
+    chown root system /sys/autok/stage1/2/PARAMS
+    chown root system /sys/autok/stage1/2/VOLTAGE
+    chown root system /sys/autok/stage1/2/LOG
+    chown root system /sys/autok/stage2/2
+
+
+    insmod /vendor/lib/modules/mtk_wmt_detect.ko
+
+
+
+
+
+
+on boot
+
+# tongjun mask for autokd only used for 6630
+# For WiFi High Speed calibration
+#service autokd /vendor/bin/autokd
+#    class core
+#    user system
+#    group system
+
+
